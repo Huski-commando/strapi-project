@@ -4,9 +4,16 @@ import { useGlobalContext } from "../context/Context";
 const Navbar = () => {
   const { openSidebar } = useGlobalContext();
   return (
-    <h2>
-      <FaBars />
-    </h2>
+    <nav>
+      <div className="nav-center">
+        <h3 className="logo">strapi</h3>
+        <button className="toggle-btn" onClick={openSidebar}>
+          <FaBars />
+        </button>
+
+        {/* navbar links  */}
+      </div>
+    </nav>
   );
 };
 
